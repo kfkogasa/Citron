@@ -1,0 +1,172 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+
+  text-align: center;
+}
+
+#container {
+  text-align: left;
+  display: inline-block;
+  margin: 0;
+
+}
+
+#id tr td {
+  min-width: 200px;
+  height: auto;
+  margin: 4px;
+}
+
+th {
+  text-align: center;
+  font-size: 18px;
+  min-width: 200px;
+  text-transform: uppercase;
+}
+
+#items {
+  background-color: #cfcfcf;
+  margin: 20px auto 0 auto;
+}
+.item {
+  margin: 3px;
+  padding: 3px;
+  width: 195px;
+  min-height: 75px;
+  background-color: #d2dfdf;
+  vertical-align: top;
+  box-shadow: 2px 2px #b3b3b3;
+}
+.item:hover {
+  box-shadow: 5px 5px #949494;
+}
+.item_title {
+  font-weight: bold;
+}
+#items tr td {
+  background-color: white;
+}
+#items_TO_DO .item {
+  background-color: #c9daf8;
+}
+#items_TO_DO .item:hover {
+  background-color: #b0c1df;
+}
+#items_IN_PROGRESS .item {
+  background-color: #dad2e9;
+}
+#items_IN_PROGRESS .item:hover {
+  background-color: #c1b9d0;
+}
+#items_CODE_REVIEW .item {
+  background-color: #fff2cd;
+}
+#items_CODE_REVIEW .item:hover {
+  background-color: #e6d9b4;
+}
+#items_ISSUES .item {
+  background-color: #f4cccc;
+}
+#items_ISSUES .item:hover {
+  background-color: #dbb3b3;
+}
+#items_COMPLETED .item {
+  background-color: #d8ead2;
+}
+#items_COMPLETED .item:hover {
+  background-color: #bfd1b9;
+}
+
+#item_details_frame {
+  background-color: #cfcfcf;
+  margin: 20px auto 0 auto;
+
+
+}
+
+#item_title {
+
+}
+#item_details {
+  background-color: white;
+  width: 400px;
+  height: 200px;
+}
+#form_table {
+  table-layout: auto;
+}
+
+#form_table tr td { padding: 5px;}
+
+#form_table tr td:first-child {
+  font-weight: bold;
+  width: 75px;
+}
+
+#form_table tr td:nth-child(2) {
+  width: 350px;
+}
+
+input[type="text"] {
+  width: 99%;
+}
+
+select {
+  width: 100%;
+  height: 20px;
+}
+
+#item_comments {
+  background-color: white;
+  font-weight: normal;
+  text-align: left;
+  min-height: 200px;
+}
+
+.spacer {
+  height: 10px;
+  width: auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+}
+.button:hover {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.button_timer {
+  margin-left: 10px;
+  background-color: cornflowerblue;
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  color: white;
+}
+.button_timer:hover {
+  background-color: #5b88d8;
+
+}
+
+.last_edit {
+  display: inline;
+  float: right;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+#account_button {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  right: 0;
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+}
+#account_button:hover {
+  background-color: cornflowerblue;
+  color: white;
+}

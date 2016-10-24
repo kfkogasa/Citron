@@ -5,3 +5,7 @@
 Router.route('/', {
   name: 'home'
 });
+Router.route('/overview', {
+  name: 'overview'
+});
+
