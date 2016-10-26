@@ -1,0 +1,67 @@
+<template name="cardDetails">
+  <div class="template-cardDetails">
+    <div class="page-header">
+    </div>
+    <div id="container">
+      <table id="item_details_frame">
+        <tr>
+          <th>Task 1748</th>
+        </tr>
+        <tr>
+          <td id="details">
+            <table id="form_table">
+              <tr>
+                <td>
+                  Name
+                </td>
+                <td><input type="text" value="Task 1748"></td>
+              </tr>
+              <tr>
+                <td>
+                  User
+                </td>
+                <td><input type="text" value="User A"></td>
+              </tr>
+              <tr>
+                <td>
+                  Category
+                </td>
+                <td>
+                  <select>
+                    <option>To Do</option>
+                    <option>In Progress</option>
+                    <option>Code Review</option>
+                    <option>Issues</option>
+                    <option>Completed</option>
+                  </select>
+                </td>
+              </tr>
+              <!--<td colspan="2"><textarea width="10px"></textarea></td>-->
+              <tr style="position: relative">
+                <td colspan="2">
+                  Comments
+                  <div class="button_timer">TIMER</div>
+                  <div class="spacer"></div>
+                  <div id="item_comments" contenteditable="true">
+                    (issue in progress)<br>
+                    *comments on issue*
+                  </div>
+                  <div class="spacer"></div>
+                  <div class="button">Save</div>
+                  <div class="button">Cancel</div>
+                  <div class="button">Delete</div>
+                  <div class="last_edit">Last edited by User A on 9/16/2016</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <a href="{{ pathFor 'home' }}" class="btn btn-primary" role="button">Return to Overview</a>
+      <br>
+      <br>
+    </div>
+  </div>
+</template>
