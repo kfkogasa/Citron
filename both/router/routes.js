@@ -8,6 +8,12 @@ Router.route('/', {
 Router.route('/overview', {
   name: 'overview'
 });
+Router.route('/tasks', {
+    name: 'tasks'
+});
+Router.route('/mytasks', {
+    name: 'mytasks'
+});
 Router.route('/myOverview', {
   name: 'myOverview'
 });
