@@ -39,14 +39,14 @@
         <!-- shown regardless of whether or not user is logged in -->
         <ul class="nav navbar-nav navbar-right">
           <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i
-              class="fa fa-home"></i> HOME</a></li>
-          <li class="{{ isActiveRoute regex='tasks' }}"><a href="{{ pathFor 'tasks' }}"><i
-              class="fa fa-angle-double-right"></i> TASKS</a></li>
-          <li class="{{ isActiveRoute regex='mytasks' }}"><a href="{{ pathFor 'mytasks' }}"><i
-              class="fa fa-angle-double-right"></i> MY TASKS</a></li>
+              class="fa fa-home"></i> Home</a></li>
+          <li class="{{ isActiveRoute regex='overview' }}"><a href="{{ pathFor 'overview' }}"><i
+              class="fa fa-angle-double-right"></i> Overview</a></li>
+          <li class="{{ isActiveRoute regex='myOverview' }}"><a href="{{ pathFor 'myOverview' }}"><i
+              class="fa fa-angle-double-right"></i> My Overview</a></li>
           <!-- User can only navigate here if logged in, otherwise goes to sign in page -->
           <li class="{{ isActiveRoute regex='graph' }}"><a href="{{ pathFor 'graph' }}"><i
-              class="fa fa-angle-double-right"></i> ISSUE TRACKING</a></li>
+              class="fa fa-angle-double-right"></i> Issue Tracking</a></li>
           <!-- User can only navigate here if logged in, otherwise goes to sign in page -->
         </ul>
       </div>
