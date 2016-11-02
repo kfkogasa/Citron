@@ -14,6 +14,9 @@ Router.route('/myOverview', {
 Router.route('/graph', {
   name: 'graph'
 });
+Router.route('/addCard', {
+  name: 'addCard'
+});
 Router.route('/cardDetails', {
   name: 'cardDetails'
 });
