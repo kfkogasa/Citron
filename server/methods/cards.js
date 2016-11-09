@@ -5,7 +5,8 @@ Meteor.methods({
   addCard: function(name, description) {
     Cards.insert({
       name: name,
-      description: description
+      description: description,
+      category: 'toDo'
     });
   }
 });
