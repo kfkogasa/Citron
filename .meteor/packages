@@ -28,7 +28,10 @@ fortawesome:fontawesome # For icons in navbar
 
 useraccounts:bootstrap  # Needed for ensureSignedIn tabs
 
-iron:router
+iron:router                # Add routes for navigating
 useraccounts:iron-routing # Add route configurations
-zimme:active-route
+zimme:active-route     # Active route helpers
+
+session #Add session info
+
 shell-server

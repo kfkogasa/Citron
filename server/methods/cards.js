@@ -6,7 +6,9 @@ Meteor.methods({
     Cards.insert({
       name: name,
       description: description,
-      category: 'toDo'
+      category: 'toDo',
+      user: null,
+      issue: false
     });
   }
 });
