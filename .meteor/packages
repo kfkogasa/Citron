@@ -32,6 +32,6 @@ iron:router                # Add routes for navigating
 useraccounts:iron-routing # Add route configurations
 zimme:active-route     # Active route helpers
 
-session #Add session info
+session         #Add session info
 
 shell-server

@@ -43,10 +43,18 @@
 
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Save Changes</button>
+            <button type="submit" class="btn btn-info">Save Changes</button>
           </div>
         </div>
       </form>
+      <span id="time" hidden>0</span>
+      <span id="hour">0</span> Hours
+      <span id="min">0</span> Minutes
+      <span id="sec">0</span> Seconds
+      <br>
+      <button id="start" class="btn btn-success">Start Timer</button>
+      <button id="stop" class="btn btn-warning">Stop Timer</button>
+
       <br>
       <br>
       <a href="{{ pathFor 'overview' }}" class="btn btn-primary" role="button">Return to Overview</a>
