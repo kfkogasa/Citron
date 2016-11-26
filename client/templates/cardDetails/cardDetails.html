@@ -47,13 +47,25 @@
           </div>
         </div>
       </form>
-      <span id="time" hidden>0</span>
-      <span id="hour">0</span> Hours
-      <span id="min">0</span> Minutes
-      <span id="sec">0</span> Seconds
-      <br>
-      <button id="start" class="btn btn-success">Start Timer</button>
-      <button id="stop" class="btn btn-warning">Stop Timer</button>
+
+      <div id="currentTime">
+        <h4>Total Time</h4>
+        <div id="currTime" hidden>0</div>
+        <span id="currentHour"></span> Hours
+        <span id="currentMin"></span> Minutes
+        <span id="currentSec"></span> Seconds
+      </div>
+
+      <div id="timer">
+        <h4>Timer</h4>
+        <div id="time" hidden>0</div>
+        <span id="hour">0</span> Hours
+        <span id="min">0</span> Minutes
+        <span id="sec">0</span> Seconds
+        <br>
+        <button id="start" class="btn btn-success">Start Timer</button>
+        <button id="stop" class="btn btn-warning">Stop Timer & Save</button>
+      </div>
 
       <br>
       <br>
