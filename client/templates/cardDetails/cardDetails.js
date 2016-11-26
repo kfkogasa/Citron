@@ -68,18 +68,15 @@ Template.cardDetails.events({
     var category = document.getElementById('category').value;
     var description = document.getElementById('cardDescription').value;
     if ((card.user == null) && (document.getElementById('take').checked == true)) {
-      console.log("if");
       var user = Meteor.userId();
     }
     else {
-      console.log("else");
       var user = null;
     }
     var issue = document.getElementById('issue').checked;
     Meteor.call("updateCardDetails", cardId, description, category, user, issue);
 
     alert("Changes Saved");
-
   },
 
   "click #stop": function () {
