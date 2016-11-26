@@ -35,6 +35,6 @@ zimme:active-route     # Active route helpers
 session         # Add session info
 
 sanjo:jasmine   # For testing
-velocity:html-reporter
+# velocity:html-reporter
 
 shell-server

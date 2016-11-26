@@ -1,3 +1,13 @@
+Template.cardDetails.helpers({
+  /**
+   * returns current user assigned to task card
+   */
+  'assigned': function () {
+    var cardId = Session.get("selectedCard");
+    return Cards.findOne({_id: cardId}).user;
+  }
+});
+
 Template.cardDetails.onRendered(function () {
   /**
    * displays clicked card's current details in form
@@ -7,9 +17,9 @@ Template.cardDetails.onRendered(function () {
   document.getElementById('name').innerHTML = card.name;
   document.getElementById('category').value = String(card.category);
   document.getElementById('cardDescription').innerHTML = card.description;
-  if (card.user != null) {
+  /** if (card.user != null) {
     document.getElementById('user').innerHTML = card.user;
-  }
+  }**/
   if (card.issue != false) {
     document.getElementById('issue').checked = true;
   }
@@ -52,6 +62,25 @@ Template.cardDetails.events({
       }
     }, 1000);
   },
+  "click #save": function () {
+    var cardId = Session.get("selectedCard");
+    var card = Cards.findOne({_id: cardId});
+    var category = document.getElementById('category').value;
+    var description = document.getElementById('cardDescription').value;
+    if ((card.user == null) && (document.getElementById('take').checked == true)) {
+      console.log("if");
+      var user = Meteor.userId();
+    }
+    else {
+      console.log("else");
+      var user = null;
+    }
+    var issue = document.getElementById('issue').checked;
+    Meteor.call("updateCardDetails", cardId, description, category, user, issue);
+
+    alert("Changes Saved");
+
+  },
 
   "click #stop": function () {
     //stop timer
@@ -64,13 +93,10 @@ Template.cardDetails.events({
 
     //update current time
     var currTime = Number(document.getElementById('currTime').innerHTML);
-    console.log(currTime);
     currTime = currTime + time;
-    console.log(currTime);
     document.getElementById('currTime').innerHTML = currTime;
     var newSec = currTime % 60;
     currTime = (currTime - newSec) / 60;
-    console.log(currTime);
     var newMin = currTime % 60;
     currTime = (currTime - newMin) / 60;
     var newHour = currTime;

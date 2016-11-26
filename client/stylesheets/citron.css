@@ -6,3 +6,15 @@
 #toDo {
   background-color: #C9DAF8;
 }
+
+#inProgress {
+  background-color: #dad2e9;
+}
+
+#codeReview {
+  background-color: #fff2cd;
+}
+
+#completed {
+  background-color: #d8ead2;
+}

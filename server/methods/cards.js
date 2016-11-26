@@ -14,6 +14,20 @@ Meteor.methods({
   },
 
   /**
+   * Updates card details
+   */
+  updateCardDetails: function (id, description, category, user, issue) {
+    Cards.update({_id: id}, {
+      $set: {
+        description: description,
+        category: category,
+        user: user,
+        issue: issue
+      }
+    });
+  },
+
+  /**
    * Updates time for card
    */
   updateCardTime: function (id, time) {

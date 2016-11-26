@@ -17,5 +17,23 @@ Template.overview.helpers({
    */
   'toDo': function() {
     return Cards.find({category: "toDo"});
+  },
+  /**
+   * returns Object containing inProgress data from Cards collection
+   */
+  'inProgress': function() {
+    return Cards.find({category: "inProgress"});
+  },
+  /**
+   * returns Object containing codeReview data from Cards collection
+   */
+  'codeReview': function() {
+    return Cards.find({category: "codeReview"});
+  },
+  /**
+   * returns Object containing codeReview data from Cards collection
+   */
+  'completed': function() {
+    return Cards.find({category: "completed"});
   }
 });

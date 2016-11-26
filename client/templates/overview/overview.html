@@ -26,19 +26,28 @@
                 {{/each}}
               </td>
               <td>
-                <div id="cardInProgress">
-
+                {{#each inProgress}}
+                <div class="card" id="inProgress">
+                  <h4>{{name}}</h4>
+                  {{description}}
                 </div>
+                {{/each}}
               </td>
               <td>
-                <div id="cardCodeReview">
-
+                {{#each codeReview}}
+                <div class="card" id="codeReview">
+                  <h4>{{name}}</h4>
+                  {{description}}
                 </div>
+                {{/each}}
               </td>
               <td>
-                <div id="cardCompleted">
-
+                {{#each completed}}
+                <div class="card" id="completed">
+                  <h4>{{name}}</h4>
+                  {{description}}
                 </div>
+                {{/each}}
               </td>
             </tr>
             </tbody>
