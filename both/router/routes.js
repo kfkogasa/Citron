@@ -29,5 +29,5 @@ Router.route('/sign-up', {
  * Users must be logged in to view myOverview page
  */
 Router.plugin('ensureSignedIn', {
-  only: ['myOverview']
+  only: ['myOverview', 'cardDetails']
 });
