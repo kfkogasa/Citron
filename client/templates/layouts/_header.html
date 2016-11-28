@@ -17,37 +17,35 @@
       <!--k12-->
       <div>
         {{#if currentUser}} <!-- user logged in -->
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-user"></i> {{ currentUser.profile.name }} <i
-                  class="fa fa-caret-down"></i>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#" class="logout" data-action="logout"><i class="fa fa-lock"></i> Sign Out</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-user"></i> {{ currentUser.profile.name }} <i
+                class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#" class="logout" data-action="logout"><i class="fa fa-lock"></i> Sign Out</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
         {{else}} <!-- user not logged in -->
-          <div class="navbar-right">
-            <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
-            <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>
-          </div>
+        <div class="navbar-right">
+          <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
+          <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>
+        </div>
         {{/if}}
 
         <!-- shown regardless of whether or not user is logged in -->
         <ul class="nav navbar-nav navbar-right">
           <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i
               class="fa fa-home"></i> Home</a></li>
-          <li class="{{ isActiveRoute regex='overview' }}"><a href="{{ pathFor 'overview' }}"><i
-              class="fa fa-angle-double-right"></i> Overview</a></li>
-          <li class="{{ isActiveRoute regex='myOverview' }}"><a href="{{ pathFor 'myOverview' }}"><i
-              class="fa fa-angle-double-right"></i> My Overview</a></li>
-          <!-- User can only navigate here if logged in, otherwise goes to sign in page -->
+          <li class="{{ isActiveRoute regex='overview' }}"><a href="{{ pathFor 'overview' }}"><i class="fa fa-angle-double-right"></i> Overview</a></li>
+          {{#if currentUser}} <!-- only displays if user is logged in -->
+          <li class="{{ isActiveRoute regex='myOverview' }}"><a href="{{ pathFor 'myOverview' }}"><i class="fa fa-angle-double-right"></i> My Overview</a></li>
+          {{/if}}
           <li class="{{ isActiveRoute regex='graph' }}"><a href="{{ pathFor 'graph' }}"><i
               class="fa fa-angle-double-right"></i> Issue Tracking</a></li>
-          <!-- User can only navigate here if logged in, otherwise goes to sign in page -->
         </ul>
       </div>
 

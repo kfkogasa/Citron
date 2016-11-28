@@ -1,3 +1,4 @@
 Router.configure({
-  layoutTemplate: 'appLayout'
+  layoutTemplate: 'appLayout',
+  notFoundTemplate: 'notFound'
 });

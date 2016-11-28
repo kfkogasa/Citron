@@ -20,3 +20,14 @@ Router.route('/addCard', {
 Router.route('/cardDetails', {
   name: 'cardDetails'
 });
+Router.route('/sign-up', {
+  name: 'atSignUp',
+  redirect: 'atSignIn'
+});
+
+/**
+ * Users must be logged in to view myOverview page
+ */
+Router.plugin('ensureSignedIn', {
+  only: ['myOverview']
+});
