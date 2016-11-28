@@ -68,7 +68,8 @@ Template.cardDetails.events({
     var category = document.getElementById('category').value;
     var description = document.getElementById('cardDescription').value;
     if ((card.user == null) && (document.getElementById('take').checked == true)) {
-      var user = Meteor.userId();
+      var user = Meteor.users.findOne(Meteor.userId());
+      user = user.username;
     }
     else {
       var user = null;

@@ -16,24 +16,24 @@ Template.myOverview.helpers({
    * returns Object containing toDo data from Cards collection
    */
   'toDo': function() {
-    return Cards.find({category: "toDo", user: Meteor.userId()});
+    return Cards.find({category: "toDo", user: Meteor.users.findOne(Meteor.userId()).username});
   },
   /**
    * returns Object containing inProgress data from Cards collection
    */
   'inProgress': function() {
-    return Cards.find({category: "inProgress", user: Meteor.userId()});
+    return Cards.find({category: "inProgress", user: Meteor.users.findOne(Meteor.userId()).username});
   },
   /**
    * returns Object containing codeReview data from Cards collection
    */
   'codeReview': function() {
-    return Cards.find({category: "codeReview", user: Meteor.userId()});
+    return Cards.find({category: "codeReview", user: Meteor.users.findOne(Meteor.userId()).username});
   },
   /**
    * returns Object containing codeReview data from Cards collection
    */
   'completed': function() {
-    return Cards.find({category: "completed", user: Meteor.userId()});
+    return Cards.find({category: "completed", user: Meteor.users.findOne(Meteor.userId()).username});
   }
 });
