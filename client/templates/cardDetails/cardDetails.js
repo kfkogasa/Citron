@@ -1,10 +1,17 @@
 Template.cardDetails.helpers({
   /**
-   * returns current user assigned to task card
+   * returns current user assigned to task card if not the current user
    */
-  'assigned': function () {
+  'otherAssigned': function () {
     var cardId = Session.get("selectedCard");
-    return Cards.findOne({_id: cardId}).user;
+    var username = (Cards.findOne({_id: cardId})).user;
+
+    if (username != Meteor.users.findOne(Meteor.userId()).username) {
+      return username;
+    }
+    else {
+      return null;
+    }
   }
 });
 
@@ -15,11 +22,12 @@ Template.cardDetails.onRendered(function () {
   var cardId = Session.get("selectedCard");
   var card = Cards.findOne({_id: cardId});
   document.getElementById('name').innerHTML = card.name;
+  if (Cards.findOne({_id: cardId, user: Meteor.users.findOne(Meteor.userId()).username})) {
+    document.getElementById('take').checked = true;
+  }
   document.getElementById('category').value = String(card.category);
   document.getElementById('cardDescription').innerHTML = card.description;
-  /** if (card.user != null) {
-    document.getElementById('user').innerHTML = card.user;
-  }**/
+
   if (card.issue != false) {
     document.getElementById('issue').checked = true;
   }
