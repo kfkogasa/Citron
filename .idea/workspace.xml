@@ -25,14 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="overview.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="overview.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/Overview/overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="73" column="78" selection-start-line="73" selection-start-column="78" selection-end-line="73" selection-end-column="78" />
-              <folding>
-                <element signature="e#2403#4450#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="1760">
+              <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,8 +58,8 @@
       <file leaf-file-name="addCard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/addCard/addCard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state relative-caret-position="88">
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -70,8 +68,18 @@
       <file leaf-file-name="cardDetails.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/cardDetails/cardDetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="74" selection-end-column="10" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graph.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/templates/graph/graph.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -100,20 +108,8 @@
       <file leaf-file-name="myOverview.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/myOverview/myOverview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1562">
-              <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-              <folding>
-                <element signature="e#2232#4547#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="citron-old.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/stylesheets/citron-old.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="72" column="27" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="27" />
+            <state relative-caret-position="664">
+              <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -136,6 +132,7 @@
       <list>
         <option value="Meteor HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -166,12 +163,13 @@
         <option value="$PROJECT_DIR$/client/templates/cardDetails/cardDetails.html" />
         <option value="$PROJECT_DIR$/client/stylesheets/citron.css" />
         <option value="$PROJECT_DIR$/client/templates/Overview/overview.js" />
-        <option value="$PROJECT_DIR$/client/templates/myOverview/myOverview.html" />
         <option value="$PROJECT_DIR$/client/templates/myOverview/myOverview.js" />
         <option value="$PROJECT_DIR$/client/templates/addCard/addCard.html" />
         <option value="$PROJECT_DIR$/client/templates/cardDetails/cardDetails.js" />
         <option value="$PROJECT_DIR$/both/router/routes.js" />
+        <option value="$PROJECT_DIR$/client/templates/myOverview/myOverview.html" />
         <option value="$PROJECT_DIR$/client/templates/Overview/overview.html" />
+        <option value="$PROJECT_DIR$/client/templates/graph/graph.html" />
       </list>
     </option>
   </component>
@@ -399,6 +397,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="graph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Citron" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Citron" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="cardDetails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -564,6 +584,7 @@
     <property name="js.meteor.project" value="true" />
     <property name="js.meteor.library.was.enabled" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/htdocs temp/final" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -958,16 +979,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/templates/Overview/overview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="27" />
-          <folding>
-            <element signature="e#2403#4450#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/cardDetails/cardDetails.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1078">
@@ -1019,9 +1030,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
           <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-          <folding>
-            <element signature="e#2403#4450#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,16 +1293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/myOverview/myOverview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1562">
-          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-          <folding>
-            <element signature="e#2232#4547#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/atSignUp/atSignUp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="806">
@@ -1326,22 +1325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/addCard/addCard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/cardDetails/cardDetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="74" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/layouts/_header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1350,13 +1333,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/myOverview/myOverview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/Overview/overview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="73" column="78" selection-start-line="73" selection-start-column="78" selection-end-line="73" selection-end-column="78" />
-          <folding>
-            <element signature="e#2403#4450#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1760">
+          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/cardDetails/cardDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/addCard/addCard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/graph/graph.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
