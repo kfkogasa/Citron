@@ -7,28 +7,52 @@ Template.myOverview.events({
     var cardId = this._id;
     //save clicked card's id
     Session.set("selectedCard",cardId);
-    Router.go('cardDetails')
+    Router.go('cardDetails');
   },
+  "click .cardIssue": function() {
+    var cardId = this._id;
+    //save clicked card's id
+    Session.set("selectedCard",cardId);
+    Router.go('cardDetails');
+  }
 });
 
 Template.myOverview.helpers({
   /**
-   * returns Object containing toDo data from Cards collection
+   * returns Object containing toDo data from Cards collection that are not issues
    */
   'toDo': function() {
-    return Cards.find({category: "toDo", user: Meteor.users.findOne(Meteor.userId()).username});
+    return Cards.find({category: "toDo", user: Meteor.users.findOne(Meteor.userId()).username, issue: false});
   },
   /**
-   * returns Object containing inProgress data from Cards collection
+   * returns Object containing toDo data from Cards collection that are issues
+   */
+  'toDoIssue': function() {
+    return Cards.find({category: "toDo", user: Meteor.users.findOne(Meteor.userId()).username, issue: true});
+  },
+  /**
+   * returns Object containing inProgress data from Cards collection that are not issues
    */
   'inProgress': function() {
-    return Cards.find({category: "inProgress", user: Meteor.users.findOne(Meteor.userId()).username});
+    return Cards.find({category: "inProgress", user: Meteor.users.findOne(Meteor.userId()).username, issue: false});
   },
   /**
-   * returns Object containing codeReview data from Cards collection
+   * returns Object containing inProgress data from Cards collection that are issues
+   */
+  'inProgressIssue': function() {
+    return Cards.find({category: "inProgress", user: Meteor.users.findOne(Meteor.userId()).username, issue: true});
+  },
+  /**
+   * returns Object containing codeReview data from Cards collection that are not issues
    */
   'codeReview': function() {
-    return Cards.find({category: "codeReview", user: Meteor.users.findOne(Meteor.userId()).username});
+    return Cards.find({category: "codeReview", user: Meteor.users.findOne(Meteor.userId()).username, issue: false});
+  },
+  /**
+   * returns Object containing codeReview data from Cards collection that are  issues
+   */
+  'codeReviewIssue': function() {
+    return Cards.find({category: "codeReview", user: Meteor.users.findOne(Meteor.userId()).username, issue: true});
   },
   /**
    * returns Object containing codeReview data from Cards collection

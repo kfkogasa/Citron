@@ -18,6 +18,12 @@
             <tbody>
             <tr>
               <td>
+                {{#each toDoIssue}}
+                <div class="cardIssue">
+                  <h4>{{name}}</h4>
+                  {{description}}
+                </div>
+                {{/each}}
                 {{#each toDo}}
                 <div class="card" id="toDo">
                   <h4>{{name}}</h4>
@@ -26,6 +32,12 @@
                 {{/each}}
               </td>
               <td>
+                {{#each inProgressIssue}}
+                <div class="cardIssue">
+                  <h4>{{name}}</h4>
+                  {{description}}
+                </div>
+                {{/each}}
                 {{#each inProgress}}
                 <div class="card" id="inProgress">
                   <h4>{{name}}</h4>
@@ -34,6 +46,12 @@
                 {{/each}}
               </td>
               <td>
+                {{#each codeReviewIssue}}
+                <div class="cardIssue">
+                  <h4>{{name}}</h4>
+                  {{description}}
+                </div>
+                {{/each}}
                 {{#each codeReview}}
                 <div class="card" id="codeReview">
                   <h4>{{name}}</h4>
