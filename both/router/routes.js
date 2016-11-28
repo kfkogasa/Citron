@@ -26,8 +26,8 @@ Router.route('/sign-up', {
 });
 
 /**
- * Users must be logged in to view myOverview page
+ * Users must be logged in to view myOverview, cardDetails, and addCard pages
  */
 Router.plugin('ensureSignedIn', {
-  only: ['myOverview', 'cardDetails']
+  only: ['myOverview', 'cardDetails', 'addCard']
 });

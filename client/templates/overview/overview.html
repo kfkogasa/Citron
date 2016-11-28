@@ -71,7 +71,9 @@
             </tbody>
           </table>
         </div>
+        {{#if currentUser}} <!-- only show addCard button if user is logged in -->
         <a href="{{ pathFor 'addCard' }}" class="btn btn-primary" role="button">Add New Task</a>
+        {{/if}}
         <br>
         <br>
       </div>

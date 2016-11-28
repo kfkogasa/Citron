@@ -25,14 +25,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="overview.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="overview.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/templates/Overview/overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-546">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="510">
+              <caret line="73" column="78" selection-start-line="73" selection-start-column="78" selection-end-line="73" selection-end-column="78" />
               <folding>
-                <element signature="e#2304#4351#0" expanded="false" />
+                <element signature="e#2403#4450#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addCard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/addCard/addCard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="7" column="5" selection-start-line="6" selection-start-column="6" selection-end-line="7" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/both/router/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="704">
+              <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,8 +70,18 @@
       <file leaf-file-name="cardDetails.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/cardDetails/cardDetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
+            <state relative-caret-position="796">
               <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="74" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/layouts/_header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="51" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -89,37 +119,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="citron.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/stylesheets/citron.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="overview.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/templates/Overview/overview.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="30" column="52" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myOverview.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/templates/myOverview/myOverview.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cardDetails.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cardDetails.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/cardDetails/cardDetails.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
@@ -164,14 +164,14 @@
         <option value="$PROJECT_DIR$/client/templates/layouts/_header.html" />
         <option value="$PROJECT_DIR$/both/accounts/config.js" />
         <option value="$PROJECT_DIR$/client/templates/cardDetails/cardDetails.html" />
-        <option value="$PROJECT_DIR$/both/router/routes.js" />
         <option value="$PROJECT_DIR$/client/stylesheets/citron.css" />
-        <option value="$PROJECT_DIR$/client/templates/Overview/overview.html" />
         <option value="$PROJECT_DIR$/client/templates/Overview/overview.js" />
         <option value="$PROJECT_DIR$/client/templates/myOverview/myOverview.html" />
         <option value="$PROJECT_DIR$/client/templates/myOverview/myOverview.js" />
         <option value="$PROJECT_DIR$/client/templates/addCard/addCard.html" />
         <option value="$PROJECT_DIR$/client/templates/cardDetails/cardDetails.js" />
+        <option value="$PROJECT_DIR$/both/router/routes.js" />
+        <option value="$PROJECT_DIR$/client/templates/Overview/overview.html" />
       </list>
     </option>
   </component>
@@ -963,7 +963,7 @@
         <state relative-caret-position="132">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="27" />
           <folding>
-            <element signature="e#2304#4351#0" expanded="false" />
+            <element signature="e#2403#4450#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1020,7 +1020,7 @@
         <state relative-caret-position="902">
           <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
           <folding>
-            <element signature="e#2304#4351#0" expanded="false" />
+            <element signature="e#2403#4450#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1178,14 +1178,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/addCard/addCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="7" column="5" selection-start-line="6" selection-start-column="6" selection-end-line="7" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.meteor/packages">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="730">
@@ -1226,14 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/layouts/_header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="44" column="100" selection-start-line="44" selection-start-column="100" selection-end-line="44" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/misc/notFound.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1264,14 +1248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="50" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/both/router/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1326,10 +1302,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/cardDetails/cardDetails.html">
+    <entry file="file://$PROJECT_DIR$/client/templates/cardDetails/cardDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="74" selection-end-column="10" />
+        <state relative-caret-position="462">
+          <caret line="86" column="29" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/addCard/addCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="7" column="5" selection-start-line="6" selection-start-column="6" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/both/router/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1342,21 +1334,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/Overview/overview.html">
+    <entry file="file://$PROJECT_DIR$/client/templates/cardDetails/cardDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-546">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#2304#4351#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="796">
+          <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="74" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/cardDetails/cardDetails.js">
+    <entry file="file://$PROJECT_DIR$/client/templates/layouts/_header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="86" column="29" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+        <state relative-caret-position="396">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/Overview/overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="73" column="78" selection-start-line="73" selection-start-column="78" selection-end-line="73" selection-end-column="78" />
+          <folding>
+            <element signature="e#2403#4450#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
