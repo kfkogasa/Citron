@@ -7,7 +7,39 @@
     <h4 id="error"></h4>
 
     <div class="page-body">
-
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+          <tr>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              {{#each toDoIssue}}
+                <div class="cardIssue">
+                  <h4>{{name}}</h4>
+                  {{description}}
+                </div>
+              {{/each}}
+              {{#each inProgressIssue}}
+                <div class="cardIssue">
+                  <h4>{{name}}</h4>
+                  {{description}}
+                </div>
+              {{/each}}
+              {{#each codeReviewIssue}}
+                <div class="cardIssue">
+                  <h4>{{name}}</h4>
+                  {{description}}
+                </div>
+              {{/each}}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>
