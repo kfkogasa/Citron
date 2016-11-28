@@ -83,6 +83,10 @@ Template.cardDetails.events({
       var user = null;
     }
     var issue = document.getElementById('issue').checked;
+    //if category is 'completed', card can no longer be an issue
+    if(category == "completed") {
+      issue = false;
+    }
     Meteor.call("updateCardDetails", cardId, description, category, user, issue);
 
     alert("Changes Saved");
