@@ -1,3 +1,7 @@
+import Highcharts from 'highcharts';
+
+
+
 Template.issueTracking.events({
     /**
      * redirects to cardDetail template which will display clicked card's info
@@ -15,6 +19,8 @@ Template.issueTracking.events({
         Session.set("selectedCard",cardId);
         Router.go('cardDetails');
     }
+
+
 });
 
 Template.issueTracking.helpers({
