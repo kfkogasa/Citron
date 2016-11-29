@@ -1,7 +1,5 @@
 import Highcharts from 'highcharts';
 
-
-
 Template.issueTracking.events({
     /**
      * redirects to cardDetail template which will display clicked card's info
@@ -24,6 +22,14 @@ Template.issueTracking.events({
 });
 
 Template.issueTracking.helpers({
+    render: function () {
+        var element = this.el;
+        $(this.el).html(this.template());
+        $("#chart").append(element);
+        this.renderChart(element);
+        return this;
+    },
+
     /**
      * returns Object containing toDo data from Cards collection that are issues
      */
