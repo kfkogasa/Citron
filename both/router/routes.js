@@ -11,8 +11,8 @@ Router.route('/overview', {
 Router.route('/myOverview', {
   name: 'myOverview'
 });
-Router.route('/issueTracking', {
-    name: 'issueTracking'
+Router.route('/graph', {
+    name: 'graph'
 });
 Router.route('/addCard', {
   name: 'addCard'

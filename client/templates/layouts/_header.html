@@ -44,8 +44,8 @@
           {{#if currentUser}} <!-- only displays if user is logged in -->
           <li class="{{ isActiveRoute regex='myOverview' }}"><a href="{{ pathFor 'myOverview' }}"><i class="fa fa-angle-double-right"></i> My Overview</a></li>
           {{/if}}
-          <li class="{{ isActiveRoute regex='issueTracking' }}"><a href="{{ pathFor 'issueTracking' }}"><i
-              class="fa fa-angle-double-right"></i> Issue Tracking</a></li>
+          <li class="{{ isActiveRoute regex='issueTracking' }}"><a href="{{ pathFor 'graph' }}"><i
+              class="fa fa-angle-double-right"></i> Issue Graph</a></li>
         </ul>
       </div>
 
