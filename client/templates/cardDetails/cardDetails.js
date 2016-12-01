@@ -41,14 +41,8 @@ Template.cardDetails.onRendered(function () {
     if (card.issue != false) {
         document.getElementById('issue').checked = true;
     }
-        //this.originalstate = true;
-    //} else {
-    //    document.getElementById('issue').checked = false;
-    //    this.originalstate = false;
-    //}
 
     var timer;
-    // var time = 0;
 
     //load current DB time
     var cardTime = card.time;
@@ -85,6 +79,7 @@ Template.cardDetails.events({
             }
         }, 1000);
     },
+    /*
     "click #save": function () {
         var cardId = Session.get("selectedCard");
         var card = Cards.findOne({_id: cardId});
@@ -103,10 +98,138 @@ Template.cardDetails.events({
             issue = false;
         }
 
-        Meteor.call("updateCardDetails", cardId, description, category, card.category, user, issue, card.issue);
+        //Meteor.call("updateCardDetails", cardId, description, category, card.category, user, issue, card.issue);
+        document.getElementById('sec').innerHTML = 0;
+      }
+      else {
+        document.getElementById('sec').innerHTML = Number(document.getElementById('sec').innerHTML) + 1;
+      }
+    }, 1000);
+  }, */
+  "click #save": function () {
+    var cardId = Session.get("selectedCard");
+    var card = Cards.findOne({_id: cardId});
+    var category = document.getElementById('category').value;
+    var description = document.getElementById('cardDescription').value;
+    if ((card.user == null) && (document.getElementById('take').checked == true)) {
+      var user = Meteor.users.findOne(Meteor.userId());
+      user = user.username;
+    }
+    else {
+      var user = null;
+    }
+    var issue = document.getElementById('issue').checked;
+    //if category is 'completed', card can no longer be an issue
+    if (category == "completed") {
+      issue = false;
+    }
 
-        alert("Changes Saved.");
-    },
+    //vars for issue collection updates
+    var prevIssue = card.issue;
+    var prevCategory = card.category;
+    var currDate = new Date();
+    currDate = currDate.toLocaleDateString();
+
+    Meteor.call("updateCardDetails", cardId, description, category, user, issue);
+
+    //if issue found, add 1 to issue count for that category
+    if ((prevIssue == false) && (issue == true)) {
+      //issue change in toDo
+      if (category == "toDo") {
+        Meteor.call("updateIssues", currDate, 1, 0, 0, 0);
+      }
+      //issue change in inProgress
+      else if (category == "inProgress") {
+        Meteor.call("updateIssues", currDate, 0, 1, 0, 0);
+      }
+      //issue change in codeReview
+      else if (category == "codeReview") {
+        Meteor.call("updateIssues", currDate, 0, 0, 1, 0);
+      }
+      //issue change in completed -- though this should not happen (if there is an issue it is not completed)
+      else if (category == "completed") {
+        Meteor.call("updateIssues", currDate, 0, 0, 0, 1);
+      }
+    }
+    //else if issue resolved, decrement previous category count
+    else if ((prevIssue == true) && (issue == false)) {
+      //issue change in toDo
+      if (prevCategory == "toDo") {
+        Meteor.call("updateIssues", currDate, -1, 0, 0, 0);
+      }
+      //issue change in inProgress
+      else if (prevCategory == "inProgress") {
+        Meteor.call("updateIssues", currDate, 0, -1, 0, 0);
+      }
+      //issue change in codeReview
+      else if (prevCategory == "codeReview") {
+        Meteor.call("updateIssues", currDate, 0, 0, -1, 0);
+      }
+      //issue change in completed -- though this should not happen (if there is an issue it is not completed)
+      else if (prevCategory == "completed") {
+        Meteor.call("updateIssues", currDate, 0, 0, 0, -1);
+      }
+    }
+    //else if issue moved from one category to another
+    else if((prevIssue == true) && (issue == true)) {
+      //issue change from toDo to inProgress
+      if((prevCategory == "toDo") && (category == "inProgress")) {
+        Meteor.call("updateIssues", currDate, -1, 1, 0, 0);
+      }
+      //issue change from toDo to codeReview -- should not happen
+      else if((prevCategory == "toDo") && (category == "codeReview")) {
+        Meteor.call("updateIssues", currDate, -1, 0, 1, 0);
+      }
+      //issue change from toDo to completed -- should not happen
+      else if((prevCategory == "toDo") && (category == "completed")) {
+        Meteor.call("updateIssues", currDate, -1, 0, 0, 1);
+      }
+      //issue change from inProgress to toDo
+      else if((prevCategory == "inProgress") && (category == "toDo")) {
+        Meteor.call("updateIssues", currDate, 1, -1, 0, 0);
+      }
+      //issue change from inProgress to codeReview
+      else if((prevCategory == "inProgress") && (category == "codeReview")) {
+        Meteor.call("updateIssues", currDate, 0, -1, 1, 0);
+      }
+      //issue change from inProgress to completed -- should not happen
+      else if((prevCategory == "inProgress") && (category == "completed")) {
+        Meteor.call("updateIssues", currDate, 0, -1, 0, 1);
+      }
+      //issue change from codeReview to toDo
+      else if((prevCategory == "codeReview") && (category == "toDo")) {
+        Meteor.call("updateIssues", currDate, 1, 0, -1, 0);
+      }
+      //issue change from codeReview to inProgress
+      else if((prevCategory == "codeReview") && (category == "inProgress")) {
+        Meteor.call("updateIssues", currDate, 0, 1, -1, 0);
+      }
+      //issue change from codeReview to completed -- should not happen
+      else if((prevCategory == "codeReview") && (category == "completed")) {
+        Meteor.call("updateIssues", currDate, 0, 0, -1, 1);
+      }
+      /**
+       * the rest of these should not happen because there should be no issues in the completed category
+       */
+      //issue change from completed to toDo
+      else if((prevCategory == "completed") && (category == "toDo")) {
+        Meteor.call("updateIssues", currDate, 1, 0, 0, -1);
+      }
+      //issue change from completed to inProgress
+      else if((prevCategory == "completed") && (category == "inProgress")) {
+        Meteor.call("updateIssues", currDate, 0, 1, 0, -1);
+      }
+      //issue change from completed to codeReview
+      else if((prevCategory == "completed") && (category == "codeReview")) {
+        Meteor.call("updateIssues", currDate, 0, 0, 1, -1);
+      }
+    }
+    alert("Changes Saved");
+  },
+//>>>>>>> e5970b17228ea94be030bc1fc479b621aed69188
+
+        //alert("Changes Saved.");
+    //},
     "click #delete" : function () {
         if (confirm("Are you sure you want to delete this task?")) {
             var cardId = Session.get("selectedCard");

@@ -1,9 +1,12 @@
+/*<<<<<<< HEAD
 import Highcharts from 'highcharts';
 
 Template.issueTracking.onRendered(function () {
     document.title="Issue Tracking";
 });
 
+=======
+>>>>>>> e5970b17228ea94be030bc1fc479b621aed69188*/
 Template.issueTracking.events({
     /**
      * redirects to cardDetail template which will display clicked card's info
@@ -21,19 +24,9 @@ Template.issueTracking.events({
         Session.set("selectedCard",cardId);
         Router.go('cardDetails');
     }
-
-
 });
 
 Template.issueTracking.helpers({
-    render: function () {
-        var element = this.el;
-        $(this.el).html(this.template());
-        $("#chart").append(element);
-        this.renderChart(element);
-        return this;
-    },
-
     /**
      * returns Object containing toDo data from Cards collection that are issues
      */
