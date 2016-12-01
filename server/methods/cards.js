@@ -93,12 +93,14 @@ Meteor.methods({
     /**
      * Updates card details
      */
-    updateCardDetails: function (id, description, category, wasCategory, user, issue, hadIssue) {
+    //updateCardDetails: function (id, description, category, wasCategory, user, issue, hadIssue) {
+    updateCardDetails: function (id, description, category, user, issue, hadIssue) {
 
-        var date = (new Date).toDateString(); //TODO DEBUG datestamp
+        //var date = (new Date).toDateString(); //TODO DEBUG datestamp
 
         //--logIssueChange--
 
+        /*
         if ((category != wasCategory) && (issue != hadIssue)) {
             //console.log(wasCategory + " --> " + category);
             //console.log("issue state changed!");
@@ -128,6 +130,7 @@ Meteor.methods({
         } else {
             //console.log("category and issue state remained unchanged!");
         }
+        */
 
         //Meteor.call("count");
 
@@ -143,13 +146,13 @@ Meteor.methods({
 
         //get today's server date
         //if today's date is different, transfer from previous entry
-
+/*
         if (issue == true) {
             //Console.log("true");
             //if true, increment
         } else {
             //Console.log("false");
-        }
+        }*/
     },
 
     /**
