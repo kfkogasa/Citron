@@ -57,3 +57,29 @@ form {
 #issues {
   width: 60%;
 }
+
+#timerBlock {
+  display: inline-block;
+  left: auto;
+  right: auto;
+  vertical-align: top;
+
+  padding: 20px;
+
+  background-color: #dddddd;
+  width: 350px;
+
+  height: inherit;
+}
+
+#formBlock {
+  display: inline-block;
+  left: auto;
+  right: auto;
+
+  padding: 20px;
+  width: 40%;
+  min-width: 630px;
+
+  margin-bottom: 20px;
+}

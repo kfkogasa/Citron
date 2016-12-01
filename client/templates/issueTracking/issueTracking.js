@@ -1,5 +1,9 @@
 import Highcharts from 'highcharts';
 
+Template.issueTracking.onRendered(function () {
+    document.title="Issue Tracking";
+});
+
 Template.issueTracking.events({
     /**
      * redirects to cardDetail template which will display clicked card's info

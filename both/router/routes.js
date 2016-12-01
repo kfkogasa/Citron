@@ -17,6 +17,9 @@ Router.route('/issueTracking', {
 Router.route('/addCard', {
   name: 'addCard'
 });
+Router.route('/addChange', {
+    name: 'addChange'
+});
 Router.route('/cardDetails', {
   name: 'cardDetails'
 });
