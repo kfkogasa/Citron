@@ -1,12 +1,3 @@
-/*<<<<<<< HEAD
-import Highcharts from 'highcharts';
-
-Template.issueTracking.onRendered(function () {
-    document.title="Issue Tracking";
-});
-
-=======
->>>>>>> e5970b17228ea94be030bc1fc479b621aed69188*/
 Template.issueTracking.events({
     /**
      * redirects to cardDetail template which will display clicked card's info

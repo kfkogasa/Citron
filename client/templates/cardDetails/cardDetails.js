@@ -224,7 +224,7 @@ Template.cardDetails.events({
         Meteor.call("updateIssues", currDate, 0, 0, 1, -1);
       }
     }
-    alert("Changes Saved");
+    //alert("Changes Saved");
   },
 //>>>>>>> e5970b17228ea94be030bc1fc479b621aed69188
 
