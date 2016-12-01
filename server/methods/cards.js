@@ -21,6 +21,7 @@ Meteor.methods({
         });
     },
 
+    /*
     count: function () {
         function Day(day) {
             this.day = day;
@@ -81,58 +82,15 @@ Meteor.methods({
             } else {
                 dates[currentIndex].codeReview = dates[currentIndex].codeReview + element.increment;
             }
-
-            //dates.add([element.date, element.category, element.increment]);
         });
-
-        //console.log(dates);
 
         return dates;
     },
-
+*/
     /**
      * Updates card details
      */
-    //updateCardDetails: function (id, description, category, wasCategory, user, issue, hadIssue) {
-    updateCardDetails: function (id, description, category, user, issue, hadIssue) {
-
-        //var date = (new Date).toDateString(); //TODO DEBUG datestamp
-
-        //--logIssueChange--
-
-        /*
-        if ((category != wasCategory) && (issue != hadIssue)) {
-            //console.log(wasCategory + " --> " + category);
-            //console.log("issue state changed!");
-            if (issue == true) {
-                Meteor.call("addChange", date, category, 1);
-            }
-            if (issue == false) {
-                Meteor.call("addChange", date, wasCategory, -1);
-            }
-        } else if (category != wasCategory) {
-            //console.log(wasCategory + " --> " + category);
-            if (hadIssue == true) {
-                Meteor.call("addChange", date, wasCategory, -1);
-                Meteor.call("addChange", date, category, 1);
-            }
-            if (category == "completed") {
-                Meteor.call("addChange", date, wasCategory, -1);
-            }
-        } else if (issue != hadIssue) {
-            //console.log("issue state changed!");
-            if (issue == true) {
-                Meteor.call("addChange", date, category, 1);
-            }
-            else {
-                Meteor.call("addChange", date, category, -1);
-            }
-        } else {
-            //console.log("category and issue state remained unchanged!");
-        }
-        */
-
-        //Meteor.call("count");
+    updateCardDetails: function (id, description, category, user, issue) {
 
         Cards.update({_id: id}, {
             $set: {
@@ -141,18 +99,7 @@ Meteor.methods({
                 user: user,
                 issue: issue,
             },
-
         });
-
-        //get today's server date
-        //if today's date is different, transfer from previous entry
-/*
-        if (issue == true) {
-            //Console.log("true");
-            //if true, increment
-        } else {
-            //Console.log("false");
-        }*/
     },
 
     /**
