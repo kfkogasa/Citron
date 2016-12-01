@@ -22,7 +22,72 @@ Meteor.methods({
     },
 
     count: function () {
-        console.log(Changes.find().fetch());
+        function Day(day) {
+            this.day = day;
+            this.toDo = 0;
+            this.inProgress = 0;
+            this.codeReview = 0;
+
+        }
+        var changes = Changes.find().fetch();
+
+        var dates = [];
+        dates.contains = function (dayString) {
+            var hasItem = false;
+
+            dates.forEach(function (element) {
+                if (element.day == dayString) {
+                    hasItem = true;
+                }
+            });
+            return hasItem;
+        }
+        dates.indexOfDate = function (dayString) {
+            if (!dates.contains(dayString)) {
+                return -1;
+            } else {
+                var index = 0;
+                var foundIndex = -1;
+
+                dates.forEach(function (element) {
+                    if (element.day == dayString) {
+                        foundIndex = index;
+                    }
+                    index++;
+                });
+
+                return foundIndex;
+            }
+        }
+
+        changes.forEach(function (element) {
+            if (!dates.contains(element.date)) {
+                dates.push(new Day(element.date));
+
+                if (dates.indexOfDate(element.date) > 0) {
+                    var prevIndex = dates.indexOfDate(element.date) - 1;
+                    dates[prevIndex + 1].toDo = dates[prevIndex].toDo;
+                    dates[prevIndex + 1].inProgress = dates[prevIndex].inProgress;
+                    dates[prevIndex + 1].codeReview = dates[prevIndex].codeReview;
+                }
+            }
+
+            var currentIndex = dates.indexOfDate(element.date);
+
+            if (element.category == "toDo") {
+                dates[currentIndex].toDo = dates[currentIndex].toDo + element.increment;
+            } else if (element.category == "inProgress") {
+                dates[currentIndex].inProgress = dates[currentIndex].inProgress + element.increment;
+            } else {
+                dates[currentIndex].codeReview = dates[currentIndex].codeReview + element.increment;
+            }
+
+            //dates.add([element.date, element.category, element.increment]);
+        });
+
+        //console.log(dates);
+
+        return dates;
     },
 
     /**
@@ -35,8 +100,8 @@ Meteor.methods({
         //--logIssueChange--
 
         if ((category != wasCategory) && (issue != hadIssue)) {
-            console.log(wasCategory + " --> " + category);
-            console.log("issue state changed!");
+            //console.log(wasCategory + " --> " + category);
+            //console.log("issue state changed!");
             if (issue == true) {
                 Meteor.call("addChange", date, category, 1);
             }
@@ -44,7 +109,7 @@ Meteor.methods({
                 Meteor.call("addChange", date, wasCategory, -1);
             }
         } else if (category != wasCategory) {
-            console.log(wasCategory + " --> " + category);
+            //console.log(wasCategory + " --> " + category);
             if (hadIssue == true) {
                 Meteor.call("addChange", date, wasCategory, -1);
                 Meteor.call("addChange", date, category, 1);
@@ -53,7 +118,7 @@ Meteor.methods({
                 Meteor.call("addChange", date, wasCategory, -1);
             }
         } else if (issue != hadIssue) {
-            console.log("issue state changed!");
+            //console.log("issue state changed!");
             if (issue == true) {
                 Meteor.call("addChange", date, category, 1);
             }
@@ -61,10 +126,10 @@ Meteor.methods({
                 Meteor.call("addChange", date, category, -1);
             }
         } else {
-            console.log("category and issue state remained unchanged!");
+            //console.log("category and issue state remained unchanged!");
         }
 
-        Meteor.call("count");
+        //Meteor.call("count");
 
         Cards.update({_id: id}, {
             $set: {

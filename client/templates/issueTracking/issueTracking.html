@@ -12,7 +12,35 @@
       <script>
         var Highcharts = require('highcharts');
 
+        var days = [];
+        var toDoVals = [];
+        var inProgressVals = [];
+        var codeReviewVals = [];
+
+        Meteor.call("count", function(error, data) {
+          if (error) {
+            console.log(error);
+          } else {
+            data.forEach(function (element) {
+              //console.log(element.day);
+              days.push(element.day.toString());
+              toDoVals.push(element.toDo);
+              inProgressVals.push(element.inProgress);
+              codeReviewVals.push(element.codeReview);
+            });
+
+
+          }
+        });
+
+
+
         $(function () {
+          console.log(days);
+          console.log(inProgressVals);
+          console.log(toDoVals);
+          console.log(codeReviewVals);
+
           var myChart = Highcharts.chart('container', {
             chart: {
               type: 'line'
@@ -21,7 +49,8 @@
               text: 'Issues in Each Category'
             },
             xAxis: {
-              categories: ['January', 'February', 'March', 'April', 'May']
+              //type: 'string',
+              categories: days,
             },
             yAxis: {
               title: {
@@ -31,18 +60,19 @@
             series: [
               {
                 name: 'To Do',
-                data: [1, 0, 4, 2, 4]
+                data: toDoVals,
               },
               {
                 name: 'In Progress',
-                data: [5, 7, 3, 3, 5]
+                data: inProgressVals
               },
               {
                 name: 'Code Review',
-                data: [8, 2, 7, 3, 2]
+                data: codeReviewVals
               }
             ]
           });
+
         });
       </script>
 

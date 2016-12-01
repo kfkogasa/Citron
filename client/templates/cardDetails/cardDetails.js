@@ -110,7 +110,9 @@ Template.cardDetails.events({
     "click #delete" : function () {
         if (confirm("Are you sure you want to delete this task?")) {
             var cardId = Session.get("selectedCard");
+            console.log(Cards.findOne({_id: cardId}).category);
             Cards.remove({_id: cardId});
+            //Meteor.call("addChange", date, category, -1);
             Router.go("overview");
         }
     },
