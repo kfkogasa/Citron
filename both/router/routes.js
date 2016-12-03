@@ -12,13 +12,10 @@ Router.route('/myOverview', {
   name: 'myOverview'
 });
 Router.route('/graph', {
-    name: 'graph'
+  name: 'graph'
 });
 Router.route('/addCard', {
   name: 'addCard'
-});
-Router.route('/addChange', {
-    name: 'addChange'
 });
 Router.route('/cardDetails', {
   name: 'cardDetails'
