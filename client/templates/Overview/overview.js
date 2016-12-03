@@ -1,3 +1,7 @@
+Template.overview.onRendered(function () {
+    document.title="Overview";
+});
+
 Template.overview.events({
   /**
    * redirects to cardDetail template which will display clicked card's info
